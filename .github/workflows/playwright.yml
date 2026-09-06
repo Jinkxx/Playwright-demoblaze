@@ -1,5 +1,5 @@
 #be mindful that for each commit to github these actions are taking place in githubs owns cloud as a vm. It only exists during commmit, after a pass or fail is determined the VM is destroyed.
-#Nothing persists. But be aware of this as each commit will show failures as part of the CI configured here.
+#Nothing persists. But be aware of this as each commit will show failures as part of the CI configured here. fyi, note the os it runs on.
 name: Playwright Tests
 on:
   push:
