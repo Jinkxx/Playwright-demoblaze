@@ -23,11 +23,12 @@ test.describe('Homepage Tests', () => {
         const logo = page.locator('#nava');
         await expect(logo).toBeVisible();
     });
-
+    // should be looking for ".list-group-item", not the .list-group container div.
+    //  The count of list group items are 4, this includes the title "Categories"
     test('Check homepage categories', async ({ page }) => {
         // Expect the homepage categories to be visible.
         const categories = page.locator('.list-group-item');
-        await expect(categories).toHaveCount(3);
+        await expect(categories).toHaveCount(4);
     });
 
     test('Check homepage carousel', async ({ page }) => {
