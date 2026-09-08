@@ -21,7 +21,12 @@ class HomePage {
         this.loginLink = page.getByRole('link', { name: 'Login' });
         this.signUpLink = page.getByRole('link', { name: 'Sign Up' });
         // Category links
+        this.phoneLink = page.getByRole('link', { name: 'Phones' });
+        this.laptopsLink = page.getByRole('link', { name: 'Laptops' });
+        this.monitorsLink = page.getByRole('link', { name: 'Monitors' });
         // Carousel
+        this.nextButton = page.getByRole('button', { name: 'Next' });
+        this.previousButton = page.getByRole('button', { name: 'Previous' });
     }
 }
 
