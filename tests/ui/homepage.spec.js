@@ -78,7 +78,7 @@ test.describe('Homepage Tests', () => {
     test('Check homepage carousel controls', async ({ page }) => {
         // Click the carousel controls.
         //in here I have to scope out the specific carousel
-        //  by its containerID, which is optimal considering I have the id= "carouselExampleIndicators"
+        //by its containerID, which is optimal considering I have the id= "carouselExampleIndicators"
         const carousel = page.locator('#carouselExampleIndicators');
         await carousel.getByRole('button', { name: 'Next' }).click();  
         await carousel.getByRole('button', { name: 'Previous' }).click();  
