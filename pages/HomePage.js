@@ -28,6 +28,52 @@ class HomePage {
         this.nextButton = page.getByRole('button', { name: 'Next' });
         this.previousButton = page.getByRole('button', { name: 'Previous' });
     }
+    // fyi. actions here include a click, which is a testable item (can a user click this navigation link?)
+    // should any fail, then its likely the link is somehow inactive to the user
+    async goTo() {
+        await this.page.goto('https://www.demoblaze.com/');
+    }
+
+    async goToCart() {
+        await this.cartLink.click();
+    }
+
+    async goToContact() {
+        await this.contactLink.click();
+    }
+
+    async goToAboutUs() {
+        await this.aboutUsLink.click();
+    }
+
+    async goToLogin() {
+        await this.loginLink.click();
+    }
+
+    async goToSignUp() {
+        await this.signUpLink.click();
+    }
+
+    async goToPhones() {
+        await this.phoneLink.click();
+    }
+
+    async goToLaptops() {
+        await this.laptopsLink.click();
+    }
+
+    async goToMonitors() {
+        await this.monitorsLink.click();
+    }
+    
+    async clickNextCarousel() {
+        await this.nextButton.click();
+    }
+
+    async clickPreviousCarousel() {
+        await this.previousButton.click();
+    }
+    
 }
 
 module.exports = {HomePage};
