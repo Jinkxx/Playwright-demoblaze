@@ -85,4 +85,19 @@ test.describe('Homepage Tests', () => {
         await expect(homePage.nextButton).toBeVisible();
         await expect(homePage.previousButton).toBeVisible();
     });
+
+    test('Check homepage carousel next button moves to second slide', async () => {
+    //then verify the "active" class changes as the carousel navigates.    
+        await expect(homePage.firstSlide).toHaveClass(/active/);
+        await homePage.clickNextCarousel();
+        await expect(homePage.secondSlide).toHaveClass(/active/);
+    });
+    //verify the "active" class changes as the carousel navigates.
+    test ('Check homepage carousel previous button moves to first slide', async () => {
+        await expect(homePage.firstSlide).toHaveClass(/active/);
+        await homePage.clickNextCarousel();
+        await expect(homePage.secondSlide).toHaveClass(/active/);
+        await homePage.clickPreviousCarousel();
+        await expect(homePage.firstSlide).toHaveClass(/active/);
+    });
 });

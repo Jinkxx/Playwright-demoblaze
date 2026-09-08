@@ -31,6 +31,21 @@ class HomePage {
         //by its containerID, which is optimal considering I have the id= "carouselExampleIndicators"
         this.nextButton = this.carouselContainer.getByRole('button', { name: 'Next' });
         this.previousButton = this.carouselContainer.getByRole('button', { name: 'Previous' });
+        // carousel slides
+        this.firstSlide = this.carouselContainer.getByAltText('First slide');
+        this.secondSlide = this.carouselContainer.getByAltText('Second slide');
+        this.thirdSlide = this.carouselContainer.getByAltText('Third slide');
+        //carousel slide containers/indicators
+        // Locate each carousel slide by alt text
+        this.firstSlide = this.carouselContainer
+        .locator('.carousel-item')
+        .filter({ has: page.getByAltText('First slide') });
+        this.secondSlide = this.carouselContainer
+        .locator('.carousel-item')
+        .filter({ has: page.getByAltText('Second slide') });
+        this.thirdSlide = this.carouselContainer
+        .locator('.carousel-item')
+        .filter({ has: page.getByAltText('Third slide') });
         // modals from homepage/ top banner
         this.contactModal = page.locator('#exampleModal');
         this.loginModal = page.locator('#logInModal');
