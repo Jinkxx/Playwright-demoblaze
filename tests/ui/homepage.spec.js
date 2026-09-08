@@ -41,6 +41,8 @@ test.describe('Homepage Tests', () => {
     // navigation tests from the homepage
     test('navigate to cart link', async () => {
         await homePage.goToCart();
+        //assertion to verify that the cart page is visible
+        await expect(homePage.page).toHaveURL(/cart/);
     });
 
     test('navigate to contact link', async () => {

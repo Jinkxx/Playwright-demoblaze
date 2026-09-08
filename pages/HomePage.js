@@ -31,9 +31,13 @@ class HomePage {
         //by its containerID, which is optimal considering I have the id= "carouselExampleIndicators"
         this.nextButton = this.carouselContainer.getByRole('button', { name: 'Next' });
         this.previousButton = this.carouselContainer.getByRole('button', { name: 'Previous' });
+        // modals from homepage/ top banner
+        this.contactModal = page.locator('#exampleModal');
+        this.loginModal = page.locator('#logInModal');
+        this.signUpModal = page.locator('#signInModal');
+        this.aboutUsLink = page.locator('#videoModal');
     }
-    // fyi. actions here include a click, which is a testable item (can a user click this navigation link?)
-    // should any fail, then its likely the link is somehow inactive to the user
+    // actions
     async goTo() {
         await this.page.goto('https://www.demoblaze.com/');
     }
