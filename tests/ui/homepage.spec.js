@@ -47,18 +47,26 @@ test.describe('Homepage Tests', () => {
 
     test('navigate to contact link', async () => {
         await homePage.goToContact();
+        //assertion to verify that the contact modal is visible
+        await expect(homePage.contactModal).toBeVisible();
     });
 
     test('navigate to about us link', async () => {
         await homePage.goToAboutUs();
+        //assertion to verify that the about us modal is visible
+        await expect(homePage.aboutUsLink).toBeVisible();
     });
 
     test('navigate to log in link', async () => {
         await homePage.goToLogin();
+        //assertion to verify that the login modal is visible
+        await expect(homePage.loginModal).toBeVisible();
     });
 
     test('navigate to sign up link', async () => {
         await homePage.goToSignUp();
+        //assertion to verify that the sign up modal is visible
+        await expect(homePage.signUpModal).toBeVisible();
     });
 //NEEDS ASSERTIONS
     test('navigate to phones link', async () => {
