@@ -54,7 +54,7 @@ test.describe('Homepage Tests', () => {
     test('navigate to about us link', async () => {
         await homePage.goToAboutUs();
         //assertion to verify that the about us modal is visible
-        await expect(homePage.aboutUsLink).toBeVisible();
+        await expect(homePage.aboutUsModal).toBeVisible();
     });
 
     test('navigate to log in link', async () => {
