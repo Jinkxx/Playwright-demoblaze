@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
  * End 2 End Tests
  * Tests workflows of the application from start to finish
 */
-/**
+
 test.describe('End 2 End Tests', () => {
 
     test.beforeEach(async ({ page }) => {
@@ -37,4 +37,3 @@ test.describe('End 2 End Tests', () => {
         await expect(aboutUsPage).toBeVisible();
     });
 });
-*/
